@@ -38,6 +38,28 @@ def directors_menu():
         else:
             print("Invalid choice. Please try again.")
 
-# Test the menu
+# Main Menu loop
+def main_menu():
+    while True:
+        print("\nMain Menu:")
+        print("1. Farmers Menu")
+        print("2. Collectors Menu")
+        print("3. Directors Menu")
+        print("4. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            farmers_menu()  # Assuming you have a farmers_menu function defined elsewhere
+        elif choice == '2':
+            collectors_menu()  # Call the collectors menu
+        elif choice == '3':
+            directors_menu()  # Call the directors menu
+        elif choice == '4':
+            print("Exiting the system. Goodbye!")
+            break  # Exit the loop and end the program
+        else:
+            print("Invalid choice. Please try again.")
+
 if __name__ == "__main__":
-    directors_menu()
+    main_menu()

@@ -1,5 +1,6 @@
 from collectors import add_collector, view_collectors, find_collector, delete_collector
 
+# Collectors Menu loop
 def collectors_menu():
     while True:
         print("\nCollectors Menu:")
@@ -33,9 +34,32 @@ def collectors_menu():
             except ValueError:
                 print("Please enter a valid ID.")
         elif choice == '5':
-            break
+            break  # Return to the main menu
+        else:
+            print("Invalid choice. Please try again.")
+
+# Main Menu loop
+def main_menu():
+    while True:
+        print("\nMain Menu:")
+        print("1. Farmers Menu")
+        print("2. Collectors Menu")
+        print("3. Regional Directors Menu")  # Placeholder for future menu
+        print("4. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            farmers_menu()  # Assuming you have a farmers_menu function defined elsewhere
+        elif choice == '2':
+            collectors_menu()  # Call the collectors menu
+        elif choice == '3':
+            print("Regional Directors Menu (Under Construction)")  # Placeholder
+        elif choice == '4':
+            print("Exiting the system. Goodbye!")
+            break  # Exit the loop and end the program
         else:
             print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
-    collectors_menu()
+    main_menu()

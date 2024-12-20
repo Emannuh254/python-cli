@@ -1,28 +1,39 @@
-from farmers import view_farmers, find_farmer, delete_farmer, generate_sample_farmers
+from farmers import view_farmers, find_farmer, delete_farmer, add_farmer  # Add necessary functions from farmers.py
 
 # Farmers Menu loop
 def farmers_menu():
     while True:
         print("\nFarmers Menu:")
         print("1. View List of Farmers")
-        print("2. Find a Farmer by Name")
-        print("3. Delete a Farmer by ID")
-        print("4. Return to Main Menu")
+        print("2. Add a New Farmer")
+        print("3. Find a Farmer by Name")
+        print("4. Delete a Farmer by ID")
+        print("5. Return to Main Menu")
 
         choice = input("Enter your choice: ")
 
         if choice == '1':
             view_farmers()
         elif choice == '2':
+            name = input("Enter the farmer's name: ")
+            contact = input("Enter the farmer's contact number: ")
+            region = input("Enter the farmer's region: ")
+            try:
+                milk_produced = float(input("Enter the amount of milk produced (in liters): "))
+                add_farmer(name, contact, region, milk_produced)
+                print("Farmer added successfully.")
+            except ValueError:
+                print("Invalid input. Please enter a numeric value for milk produced.")
+        elif choice == '3':
             name = input("Enter the farmer's name to search: ")
             find_farmer(name)
-        elif choice == '3':
+        elif choice == '4':
             try:
                 id = int(input("Enter the ID of the farmer to delete: "))
                 delete_farmer(id)
             except ValueError:
                 print("Please enter a valid ID.")
-        elif choice == '4':
+        elif choice == '5':
             break  # Return to the main menu
         else:
             print("Invalid choice. Please try again.")
@@ -49,3 +60,6 @@ def main_menu():
             break
         else:
             print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main_menu()

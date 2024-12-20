@@ -66,9 +66,7 @@ Copy code
 pip install -r requirements.txt
 Run the Python script:
 
-bash
-Copy code
-python app.py
+"python menu.py"
 Interact with the system via the command-line interface. The system will guide you through various menus for adding and managing farmers, collectors, and directors.
 
 Basic Commands

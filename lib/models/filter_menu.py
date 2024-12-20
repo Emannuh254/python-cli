@@ -1,26 +1,27 @@
-# filter_menu.py
-from filter import filter_by_name, filter_by_most_milk, filter_by_region
+from filter_menu import filter_menu  # Import filter menu
 
-# Menu for filtering
-def filter_menu():
+# Main Menu loop
+def main_menu():
     while True:
-        print("\nFilter Menu:")
-        print("1. Filter by Name")
-        print("2. Filter by Most Milk Collected")
-        print("3. Filter by Region")
-        print("4. Return to Main Menu")
+        print("\nMain Menu:")
+        print("1. Farmers Menu")
+        print("2. Collectors Menu")
+        print("3. Directors Menu")
+        print("4. Filter Menu")
+        print("5. Exit")
 
         choice = input("Enter your choice: ")
 
         if choice == '1':
-            name = input("Enter the name to search: ")
-            filter_by_name(name)
+            farmers_menu()  # Call the farmers menu
         elif choice == '2':
-            filter_by_most_milk()
+            print("Collectors Menu (Under Construction)")
         elif choice == '3':
-            region_name = input("Enter the region to filter by: ")
-            filter_by_region(region_name)
+            directors_menu()  # Call the directors menu
         elif choice == '4':
-            break  # Return to the main menu
+            filter_menu()  # Call the filter menu
+        elif choice == '5':
+            print("Exiting the system. Goodbye!")
+            break  # Exit the loop and end the program
         else:
             print("Invalid choice. Please try again.")

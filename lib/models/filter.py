@@ -5,7 +5,9 @@ from farmers import Farmer  # Assuming Farmer model is in farmers.py
 from region import Region  # Assuming Region model is in region.py (if it's used for region filtering)
 
 # Connect to the database
-engine = create_engine('sqlite:///milk_collector.db')
+engine = create_engine('sqlite:///milk_collector.db', echo=True)
+
+
 Session = sessionmaker(bind=engine)
 session = Session()
 

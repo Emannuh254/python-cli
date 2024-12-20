@@ -2,7 +2,7 @@ from farmers import view_farmers, find_farmer, delete_farmer, add_farmer
 from collectors import add_collector, view_collectors, find_collector, delete_collector
 from director import add_director, view_directors, find_director, delete_director
 from filter import filter_by_name, filter_by_most_milk, filter_by_region
-from region import view_regions, find_region, delete_region, generate_sample_regions
+from region import view_regions, find_region, delete_region
 
 # Farmers Menu loop
 def farmers_menu():

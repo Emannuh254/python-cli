@@ -38,7 +38,7 @@ def farmers_menu():
             except ValueError:
                 print("Please enter a valid ID.")
         elif choice == '5':
-            break  # Return to the main menu
+            break  
         else:
             print("Invalid choice. Please try again.")
 
@@ -165,11 +165,10 @@ def region_menu():
             except ValueError:
                 print("Please enter a valid ID.")
         elif choice == '4':
-            break  # Return to the main menu
+            break  
         else:
             print("Invalid choice. Please try again.")
 
-# Main Menu loop
 def main_menu():
     while True:
         print("\nMain Menu:")
